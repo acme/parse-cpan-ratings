@@ -18,4 +18,4 @@ my $undef_rating = $ratings->rating('Not-A-Distribution');
 is( $undef_rating, undef );
 
 my @ratings = $ratings->ratings;
-is( @ratings, 100 );
+is( @ratings, 99 );

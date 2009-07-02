@@ -45,3 +45,8 @@ sub rating {
     my ( $self, $distribution ) = @_;
     return $self->db->{$distribution};
 }
+
+sub ratings {
+    my $self = shift;
+    return values %{ $self->db };
+}
