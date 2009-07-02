@@ -81,6 +81,24 @@ http://cpanratings.perl.org/csv/all_ratings.csv
 
 This module provides a simple interface to that file.
 
+=head1 METHODS
+
+=head2 rating
+
+Returns a L<Parse::CPAN::Ratings::Rating> object representing
+the distribution:
+
+  my $rating = $ratings->rating('Archive-Zip');
+  print $rating->distribution . "\n"; # Archive-Zip
+  print $rating->rating . "\n";       # 3.8
+  print $rating->review_count . "\n"; # 6
+
+=head2 ratings
+
+Returns a list of all L<Parse::CPAN::Ratings::Rating> objects.
+
+  my @all_ratings = $ratings->ratings;
+
 =head1 SEE ALSO
 
 L<Parse::CPAN::Ratings::Rating>.

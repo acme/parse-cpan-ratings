@@ -23,6 +23,21 @@ DESCRIPTION
 
     This module provides a simple interface to that file.
 
+METHODS
+  rating
+    Returns a Parse::CPAN::Ratings::Rating object representing the
+    distribution:
+
+      my $rating = $ratings->rating('Archive-Zip');
+      print $rating->distribution . "\n"; # Archive-Zip
+      print $rating->rating . "\n";       # 3.8
+      print $rating->review_count . "\n"; # 6
+
+  ratings
+    Returns a list of all Parse::CPAN::Ratings::Rating objects.
+
+      my @all_ratings = $ratings->ratings;
+
 SEE ALSO
     Parse::CPAN::Ratings::Rating.
 
