@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 use Parse::CPAN::Ratings;
-use Test::More tests => 6;
+use Test::More tests => 7;
 
 my $ratings
     = Parse::CPAN::Ratings->new( filename => 't/all_ratings_100.csv' );
@@ -16,3 +16,6 @@ is( $rating->review_count, "6" );
 
 my $undef_rating = $ratings->rating('Not-A-Distribution');
 is( $undef_rating, undef );
+
+my @ratings = $ratings->ratings;
+is( @ratings, 100 );
