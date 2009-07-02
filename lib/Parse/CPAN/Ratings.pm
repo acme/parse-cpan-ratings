@@ -77,7 +77,7 @@ CPAN ratings is a web site where programmers can rate CPAN modules:
   
 It provides a file containing the average ratings at:
 
-http://cpanratings.perl.org/csv/all_ratings.csv
+  http://cpanratings.perl.org/csv/all_ratings.csv
 
 This module provides a simple interface to that file.
 
